@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.Design;
 
 namespace BinaryInOrderTree
 {
@@ -8,14 +9,14 @@ namespace BinaryInOrderTree
         {
            var tree = new BinaryTree();
            
-           /* Inorder (Left, Root, Right) */
+           System.Console.Write("Inorder => ");
            tree.TraverseInorder(tree.Root).ForEach(item => Console.Write(item + " "));
            
-           /* Postorder (Left, Right, Root) */
-           // tree.TraversePostorder(tree.Root).ForEach(item => Console.Write(item + " "));
+           System.Console.Write("\n\nPostorder => ");
+           tree.TraversePostorder(tree.Root).ForEach(item => Console.Write(item + " "));
           
-           /* Preorder (Root, Left, Right) */
-           // tree.TraversePreorder(tree.Root).ForEach(item => Console.Write(item + " "));
+           System.Console.Write("\n\nPostorder => ");
+           tree.TraversePreorder(tree.Root).ForEach(item => Console.Write(item + " "));
           
         }
     }

@@ -1,11 +1,13 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Runtime.InteropServices;
 using System.Security.Principal;
 
 class BinaryTree {
     public Node Root { get; set; }
 
+    private List<int> result;
     public BinaryTree()
     {
         this.Root = new Node(20);
@@ -16,11 +18,13 @@ class BinaryTree {
         this.Root.Left.Right.Right = new Node(14);
 
         this.Root.Right = new Node(22);
+
+        this.result = new List<int>();
     }
 
     public List<int> TraverseInorder(Node node)
     {
-        List<int> result = new List<int>();
+        result.Clear();
         this.EachInorder(this.Root, value => result.Add(value));
         return result;
     }
@@ -39,14 +43,14 @@ class BinaryTree {
 
     public List<int> TraversePostorder(Node node)
     {
-        List<int> result = new List<int>();
+        result.Clear();
         this.EachPostorder(this.Root, value => result.Add(value));
         return result;
     }
 
     public List<int> TraversePreorder(Node node)
     {
-        List<int> result = new List<int>();
+        result.Clear();
         this.EachPreorder(this.Root, value => result.Add(value));
         return result;
     }
