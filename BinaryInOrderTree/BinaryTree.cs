@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
+using System.Security.Principal;
 
-
-class BinaryTree
-{
+class BinaryTree {
     public Node Root { get; set; }
 
     public BinaryTree()
@@ -18,24 +18,60 @@ class BinaryTree
         this.Root.Right = new Node(22);
     }
 
-
-    public List<int> TraverseInOrder(Node node)
+    public List<int> TraverseInorder(Node node)
     {
         List<int> result = new List<int>();
-        this.EachInOrder(this.Root, value => result.Add(value));
+        this.EachInorder(this.Root, value => result.Add(value));
         return result;
     }
 
-
-    private void EachInOrder(Node node, Action<int> action)
+    private void EachInorder(Node node, Action<int> action)
     {
         if (node == null)
         {
             return;
         }
 
-        this.EachInOrder(node.Left, action);
+        this.EachInorder(node.Left, action);     
         action(node.Key);
-        this.EachInOrder(node.Right, action);
+        this.EachInorder(node.Right, action);
+    }
+
+    public List<int> TraversePostorder(Node node)
+    {
+        List<int> result = new List<int>();
+        this.EachPostorder(this.Root, value => result.Add(value));
+        return result;
+    }
+
+    public List<int> TraversePreorder(Node node)
+    {
+        List<int> result = new List<int>();
+        this.EachPreorder(this.Root, value => result.Add(value));
+        return result;
+    }
+
+    private void EachPostorder(Node node, Action<int> action)
+    {
+        if (node == null)
+        {
+            return;
+        }
+
+        this.EachPostorder(node.Left, action);
+        this.EachPostorder(node.Right, action);
+        action(node.Key);
+    }
+
+    private void EachPreorder(Node node, Action<int> action)
+    {
+        if (node == null)
+        {
+            return;
+        }
+        
+        action(node.Key);
+        this.EachPreorder(node.Left, action);
+        this.EachPreorder(node.Right, action);
     }
 }
