@@ -1,0 +1,15 @@
+/Users/petemihaylov/Desktop/git/prodrive/BinaryInOrderTree/bin/Debug/net5.0/BinaryInOrderTree.deps.json
+/Users/petemihaylov/Desktop/git/prodrive/BinaryInOrderTree/bin/Debug/net5.0/BinaryInOrderTree.runtimeconfig.json
+/Users/petemihaylov/Desktop/git/prodrive/BinaryInOrderTree/bin/Debug/net5.0/BinaryInOrderTree.runtimeconfig.dev.json
+/Users/petemihaylov/Desktop/git/prodrive/BinaryInOrderTree/bin/Debug/net5.0/BinaryInOrderTree.dll
+/Users/petemihaylov/Desktop/git/prodrive/BinaryInOrderTree/bin/Debug/net5.0/ref/BinaryInOrderTree.dll
+/Users/petemihaylov/Desktop/git/prodrive/BinaryInOrderTree/bin/Debug/net5.0/BinaryInOrderTree.pdb
+/Users/petemihaylov/Desktop/git/prodrive/BinaryInOrderTree/obj/Debug/net5.0/BinaryInOrderTree.csproj.AssemblyReference.cache
+/Users/petemihaylov/Desktop/git/prodrive/BinaryInOrderTree/obj/Debug/net5.0/BinaryInOrderTree.GeneratedMSBuildEditorConfig.editorconfig
+/Users/petemihaylov/Desktop/git/prodrive/BinaryInOrderTree/obj/Debug/net5.0/BinaryInOrderTree.AssemblyInfoInputs.cache
+/Users/petemihaylov/Desktop/git/prodrive/BinaryInOrderTree/obj/Debug/net5.0/BinaryInOrderTree.AssemblyInfo.cs
+/Users/petemihaylov/Desktop/git/prodrive/BinaryInOrderTree/obj/Debug/net5.0/BinaryInOrderTree.csproj.CoreCompileInputs.cache
+/Users/petemihaylov/Desktop/git/prodrive/BinaryInOrderTree/obj/Debug/net5.0/BinaryInOrderTree.dll
+/Users/petemihaylov/Desktop/git/prodrive/BinaryInOrderTree/obj/Debug/net5.0/ref/BinaryInOrderTree.dll
+/Users/petemihaylov/Desktop/git/prodrive/BinaryInOrderTree/obj/Debug/net5.0/BinaryInOrderTree.pdb
+/Users/petemihaylov/Desktop/git/prodrive/BinaryInOrderTree/obj/Debug/net5.0/BinaryInOrderTree.genruntimeconfig.cache
