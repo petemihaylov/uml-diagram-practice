@@ -1,17 +1,17 @@
-CC:=gcc
+CC:=g++
 target:=airport
-LIBS:=-lstdc++
+LIBS:=-lstdc++ -std=c++11
 
 SRCS:=$(wildcard *.cpp)
 
 all: clean build
 
 build:
-	@echo "<<<<<<< BUILDING ${target} >>>>>"
+	@echo "<<<<<< BUILDING ${target} >>>>>>"
 	@mkdir build
 	@${CC} ${SRCS} ${LIBS} -o build/${target}
 
 clean:
-	@echo "<<<<<<< CLEANING ${target} >>>>>>>>"
+	@echo "<<<<<< CLEANING ${target} >>>>>>>"
 	@rm -rf build
 
