@@ -5,18 +5,12 @@
 class CAirport
 {
 public:
-    CAirport() {}
+  CAirport();
 
-    CAirport(const std::string& name) 
-        : mName(name)
-    {
-    }
+  CAirport(const std::string &name);
 
-    std::string GetName()
-    {
-        return mName;
-    }
+  std::string GetName();
 
 private:
-    const std::string mName;
+  const std::string mName;
 };

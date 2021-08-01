@@ -6,33 +6,17 @@
 class CPassenger : public IPerson
 {
 public:
-	CPassenger(EGender gender, std::string name) 
-		: mGender(gender)
-		, mName(name)
-	{
-	}
+	CPassenger(EGender gender, std::string name);
 
-	~CPassenger() {}
+	~CPassenger();
 
-	std::string GetName() override
-	{
-		return mName;
-	}
+	std::string GetName() override;
 
-	EGender GetGender() override
-	{
-			return mGender;
-	}
+	EGender GetGender() override;
 
-	void SetAssistance(bool assistance)
-	{
-			mAssistance = assistance;
-	}
+	void SetAssistance(bool assistance);
 
-	bool NeedsAssistance()
-	{
-			return mAssistance;
-	}
+	bool NeedsAssistance();
 
 private:
 	EGender mGender;

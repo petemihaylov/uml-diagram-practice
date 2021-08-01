@@ -2,7 +2,7 @@
 #include <map>
 
 #include "flight.h"
-#include "boeing_737.h"
+#include "boeing737.h"
 #include "passenger.h"
 #include "crew_member.h"
 #include "gender.h"
