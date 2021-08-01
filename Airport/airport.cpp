@@ -5,7 +5,7 @@ CAirport::CAirport()
 {
 }
 
-CAirport::CAirport(const std::string &name)
+CAirport::CAirport(std::string &name)
     : mName(name)
 {
 }

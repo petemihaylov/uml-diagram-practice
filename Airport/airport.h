@@ -7,10 +7,10 @@ class CAirport
 public:
   CAirport();
 
-  CAirport(const std::string &name);
+  CAirport(std::string &name);
 
   std::string GetName();
 
 private:
-  const std::string mName;
+  std::string mName;
 };

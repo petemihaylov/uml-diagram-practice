@@ -4,6 +4,7 @@
 #include <ctime>
 #include <map>
 #include <string>
+#include <chrono>
 #include "airplane.h"
 #include "airport.h"
 #include "person.h"
@@ -12,35 +13,44 @@ class CFlight
 {
 public:
   // Constructor
-  CFlight(const std::string &name,
-          const int &number,
-          const std::string &departureAirport,
-          const std::string &arrivalAirport,
-          const time_t &arrivalTime,
-          const time_t &departureTime);
+  CFlight();
+
+  CFlight(std::string &name,
+          int &number,
+          std::string &departureAirportName,
+          std::string &arrivalAirportName,
+          std::time_t &arrivalTime,
+          std::time_t &departureTime);
 
   int64_t GetFlightNumber() const;
   std::string GetFlightName() const;
-  time_t GetDepartureTime() const;
-  time_t GetArrivalTime() const;
+  std::time_t GetDepartureTime() const;
+  std::time_t GetArrivalTime() const;
   CAirport GetDepartureAirport() const;
   CAirport GetArrivalAirport() const;
   std::string GetAirplaneName() const;
   std::map<std::string, std::shared_ptr<IPerson> > GetTravellers() const;
 
   void SetAirplane(IAirplane *airplane);
+  void SetFlightName(std::string);
+  void SetFlightNumber(int number);
+  void SetDepartureAirport(std::string &departureAirport);
+  void SetArrivalAirport(std::string &arrivalAirport);
+  void SetArrivalTime(std::chrono::system_clock::time_point &arrivalTime);
+  void SetDepartureTime(std::chrono::system_clock::time_point &departureTime);
+
   void AddTraveller(const std::shared_ptr<IPerson> &traveller);
 
   // Destructor
   ~CFlight();
 
 private:
-  const std::string mName;
-  const int mNumber;
-  const time_t mArrivalTime;
-  const time_t mDepartureTime;
-  const CAirport mDepartureAirport;
-  const CAirport mArrivalAirport;
+  std::string mName;
+  int mNumber;
+  std::time_t mArrivalTime;
+  std::time_t mDepartureTime;
+  CAirport mDepartureAirport;
+  CAirport mArrivalAirport;
   std::map<std::string, std::shared_ptr<IPerson> > mTravellers{};
 
   IAirplane *mAirplane{nullptr};

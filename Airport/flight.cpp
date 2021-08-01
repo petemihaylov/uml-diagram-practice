@@ -3,18 +3,23 @@
 #include "passenger.h"
 #include "crew_member.h"
 
-CFlight::CFlight(const std::string &name,
-                 const int &number,
-                 const std::string &departureAirportName,
-                 const std::string &arrivalAirportName,
-                 const time_t &arrivalTime,
-                 const time_t &departureTime)
+CFlight::CFlight(std::string &name,
+                 int &number,
+                 std::string &departureAirportName,
+                 std::string &arrivalAirportName,
+                 std::time_t &arrivalTime,
+                 std::time_t &departureTime)
     : mName(name),
       mNumber(number),
       mDepartureAirport(departureAirportName),
       mArrivalAirport(departureAirportName),
       mArrivalTime(arrivalTime),
       mDepartureTime(departureTime)
+{
+  std::cout << "Created new class with name " << mName << std::endl;
+}
+
+CFlight::CFlight()
 {
   std::cout << "Created new class with name " << mName << std::endl;
 }
@@ -29,12 +34,12 @@ std::string CFlight::GetFlightName() const
   return mName;
 }
 
-time_t CFlight::GetDepartureTime() const
+std::time_t CFlight::GetDepartureTime() const
 {
   return mDepartureTime;
 }
 
-time_t CFlight::GetArrivalTime() const
+std::time_t CFlight::GetArrivalTime() const
 {
   return mArrivalTime;
 }
@@ -88,4 +93,31 @@ std::string CFlight::GetAirplaneName() const
 CFlight::~CFlight()
 {
   std::cout << "Destructing this instance with name " << mName << std::endl;
+}
+
+void CFlight::SetFlightName(std::string name)
+{
+  mName = name;
+}
+
+void CFlight::SetFlightNumber(int number)
+{
+  mNumber = number;
+}
+
+void CFlight::SetDepartureAirport(std::string &departureAirport)
+{
+  mDepartureAirport = CAirport(departureAirport);
+}
+void CFlight::SetArrivalAirport(std::string &arrivalAirport)
+{
+  mArrivalAirport = CAirport(arrivalAirport);
+}
+void CFlight::SetArrivalTime(std::chrono::system_clock::time_point &arrivalTime)
+{
+  mArrivalTime = std::chrono::system_clock::to_time_t(arrivalTime);
+}
+void CFlight::SetDepartureTime(std::chrono::system_clock::time_point &departureTime)
+{
+  mDepartureTime = std::chrono::system_clock::to_time_t(departureTime);
 }
