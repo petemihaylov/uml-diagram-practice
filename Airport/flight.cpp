@@ -16,12 +16,12 @@ CFlight::CFlight(std::string &name,
       mArrivalTime(arrivalTime),
       mDepartureTime(departureTime)
 {
-  std::cout << "Created new class with name " << mName << std::endl;
+  std::cout << "\nCreated new class with name " << mName << std::endl;
 }
 
 CFlight::CFlight()
 {
-  std::cout << "Created new class with name " << mName << std::endl;
+  std::cout << "\nCreated new class CFlight " << std::endl;
 }
 
 int64_t CFlight::GetFlightNumber() const
@@ -92,7 +92,7 @@ std::string CFlight::GetAirplaneName() const
 
 CFlight::~CFlight()
 {
-  std::cout << "Destructing this instance with name " << mName << std::endl;
+  std::cout << "Destructing the CFlight instance " << std::endl;
 }
 
 void CFlight::SetFlightName(std::string name)

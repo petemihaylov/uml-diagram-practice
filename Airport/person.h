@@ -6,6 +6,6 @@
 class IPerson
 {
 public:
-    virtual std::string GetName() = 0;
-    virtual EGender GetGender() = 0;
+  virtual std::string GetName() = 0;
+  virtual EGender GetGender() = 0;
 };

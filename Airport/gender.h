@@ -2,6 +2,6 @@
 
 enum class EGender
 {
-    Male,
-    Female
+	Male,
+	Female
 };

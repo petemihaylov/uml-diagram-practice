@@ -6,17 +6,17 @@
 class CCrewMember : public IPerson
 {
 public:
-    CCrewMember(EGender gender, std::string name, int personal_number);
+  CCrewMember(EGender gender, std::string name, int personal_number);
 
-    ~CCrewMember();
-    std::string GetName() override;
+  ~CCrewMember();
+  std::string GetName() override;
 
-    EGender GetGender() override;
+  EGender GetGender() override;
 
-    bool GetPersonalNumber();
+  bool GetPersonalNumber();
 
 private:
-    EGender mGender;
-    std::string mName;
-    int mPersonalNumber;
+  EGender mGender;
+  std::string mName;
+  int mPersonalNumber;
 };

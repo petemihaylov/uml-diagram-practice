@@ -10,20 +10,20 @@ CPassenger::~CPassenger() {}
 
 std::string CPassenger::GetName()
 {
-    return mName;
+  return mName;
 }
 
 EGender CPassenger::GetGender()
 {
-    return mGender;
+  return mGender;
 }
 
 void CPassenger::SetAssistance(bool assistance)
 {
-    mAssistance = assistance;
+  mAssistance = assistance;
 }
 
 bool CPassenger::NeedsAssistance()
 {
-    return mAssistance;
+  return mAssistance;
 }

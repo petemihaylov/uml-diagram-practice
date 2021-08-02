@@ -10,10 +10,10 @@ CBoeing737::~CBoeing737() {}
 
 std::string CBoeing737::GetName() const
 {
-    return mName;
+  return mName;
 }
 
 int CBoeing737::GetCapacity() const
 {
-    return mCapacity;
+  return mCapacity;
 }

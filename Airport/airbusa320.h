@@ -9,9 +9,9 @@ public:
 
   ~CAirbusA320();
 
-  std::string GetName();
+  std::string GetName() const override;
 
-  int GetCapacity();
+  int GetCapacity() const override;
 
 private:
   int mCapacity;

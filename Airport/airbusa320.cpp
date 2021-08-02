@@ -7,12 +7,12 @@ CAirbusA320::CAirbusA320(int capacity, std::string name)
 
 CAirbusA320::~CAirbusA320() {}
 
-std::string CAirbusA320::GetName()
+std::string CAirbusA320::GetName() const
 {
-    return mName;
+  return mName;
 }
 
-int CAirbusA320::GetCapacity()
+int CAirbusA320::GetCapacity() const
 {
-    return mCapacity;
+  return mCapacity;
 }
