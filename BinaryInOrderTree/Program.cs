@@ -15,7 +15,7 @@ namespace BinaryInOrderTree
            System.Console.Write("\n\nPostorder => ");
            tree.TraversePostorder(tree.Root).ForEach(item => Console.Write(item + " "));
           
-           System.Console.Write("\n\nPostorder => ");
+           System.Console.Write("\n\nPreorder => ");
            tree.TraversePreorder(tree.Root).ForEach(item => Console.Write(item + " "));
           
         }
